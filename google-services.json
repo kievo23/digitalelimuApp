@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "165834371576",
+    "firebase_url": "https://book-2d982.firebaseio.com",
+    "project_id": "book-2d982",
+    "storage_bucket": "book-2d982.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165834371576:android:16331e5778fee58e",
+        "android_client_info": {
+          "package_name": "com.digitalelimu.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165834371576-sldf13vnaq34fmuiia92huo62f70tcpt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.books.book",
+            "certificate_hash": "4eb7828976573bc875e82b17b841f7b613bdf228"
+          }
+        },
+        {
+          "client_id": "165834371576-70mo93kstd0010inmbhrr1m59fj5ij06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJsRDYM_a1EDqzVeUMeMb9nk7poaaSWvk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165834371576-70mo93kstd0010inmbhrr1m59fj5ij06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

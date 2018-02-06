@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_custom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:background="@drawable/border"
+    >
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/howtopay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You can subscribe to this book directly from your MPesa on your mobile"
+                android:layout_centerInParent="true"
+                android:padding="10sp"
+                android:gravity="center"
+                android:textColor="#6e6d6d"
+                />
+
+            <TextView
+                android:id="@+id/bookdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="Subscription Charges"
+                android:layout_centerInParent="true"
+                android:padding="5sp"
+                android:gravity="center_horizontal"
+                android:textColor="#6e6d6d"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="center_horizontal"
+                android:textColor="#6e6d6d"
+                android:text="KES 5: Per Day"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="center_horizontal"
+                android:textColor="#6e6d6d"
+                android:text="KES 15: Per Week"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:textSize="18dp"
+                android:textColor="#6e6d6d"
+                android:text="KES 50: Per Month"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="center_horizontal"
+                android:textColor="#6e6d6d"
+                android:text="KES 100: Per Term"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#6e6d6d"
+                android:textSize="18dp"
+                android:gravity="center_horizontal"
+                android:text="KES 250: Per Year"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="4dp"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:textStyle="bold"
+                                android:textColor="#079c09"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/safpaybill"
+                                android:textSize="14dp"
+                                android:layout_weight="1"
+                                android:text="Kindly Enter Amount To Pay"/>
+
+                            <EditText
+                                android:id="@+id/safamount"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:inputType="number"
+                                android:textAlignment="center"
+                                android:hint="@string/enterAmount" />
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/safPush"
+                            android:background="#079c09"
+                            android:textColor="#f1f1f1"
+                            android:text="PAY WITH M-PESA STK PUSH"
+                            android:padding="5dp"
+                            android:layout_margin="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="4dp"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="#079c09"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/paybill2"
+                                android:textSize="14dp"
+                                android:text="Kindly Enter Amount To Pay"/>
+                            <EditText
+                                android:id="@+id/walletamount"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_horizontal"
+                                android:textColor="#6e6d6d"
+                                android:inputType="number"
+                                android:textAlignment="center"
+                                android:hint="@string/enterAmount"
+                                />
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/fromwallet"
+                            android:background="#07639c"
+                            android:textColor="#f1f1f1"
+                            android:text="Subscribe From My Wallet"
+                            android:padding="5dp"
+                            android:layout_margin="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="4dp"
+                        android:weightSum="2">
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="#f14f0b"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/paybill"
+                                android:textSize="14dp"
+                                android:text="You Will Enter Amount Later"/>
+                            <TextView
+                                android:id="@+id/tv"
+                                android:layout_width="wrap_content"
+                                android:textSize="14dp"
+                                android:layout_height="wrap_content"
+                                android:text="you will input amount later"
+                                android:layout_centerInParent="true"
+                                android:padding="5sp"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:textColor="#6e6d6d"
+                                />
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/airtelPay"
+                            android:background="#fc4242"
+                            android:textColor="#efefef"
+                            android:padding="5dp"
+                            android:text="PESAPAL (VISA and Others)"
+                            android:layout_margin="5dp"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <Button
+                android:id="@+id/close"
+                android:background="#ffffff"
+                android:textColor="#a13507"
+                android:text="Close"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
