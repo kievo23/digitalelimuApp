@@ -173,10 +173,16 @@ public class TermActivity extends AppCompatActivity {
                         //Toast.makeText(TermActivity.this, parts[i].toString(), Toast.LENGTH_SHORT).show();
                         Button btn = new Button(TermActivity.this);
                         btn.setId(i);
-                        btn.setTag(parts[i].toString());
+                        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.WRAP_CONTENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT
+                        );
+                        params.setMargins(2,3,2,2);
+                        btn.setLayoutParams(params);
+                        btn.setTag((parts[i]).toString());
                         btn.setBackgroundColor(Color.parseColor("#DB125160"));
                         btn.setTextColor(Color.parseColor("#fdfdfd"));
-                        btn.setText("Chapter "+i+" (" +parts[i].toString()+")");
+                        btn.setText("Chapter "+(i+1)+" (" +parts[i].toString()+")");
                         btn.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
                         btnlayout.addView(btn);
                         Button btn1 = new Button(TermActivity.this);

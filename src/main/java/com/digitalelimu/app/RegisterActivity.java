@@ -147,7 +147,6 @@ public class RegisterActivity extends AppCompatActivity implements LoaderManager
                 finish();
                 break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
