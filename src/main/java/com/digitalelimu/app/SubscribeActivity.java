@@ -93,6 +93,10 @@ public class SubscribeActivity extends AppCompatActivity {
                 finish();
                 startActivity(getIntent());
                 break;
+            case R.id.menusearch:
+                Intent intents = new Intent(SubscribeActivity.this, SearchActivity.class);
+                startActivity(intents);
+                break;
             case android.R.id.home:
                 finish();
                 break;
@@ -217,6 +221,10 @@ public class SubscribeActivity extends AppCompatActivity {
         dialog.setCanceledOnTouchOutside(false);
         dialog.show();
 
+        Log.v("ACCESS TOKEN",accessToken);
+        Log.v("PHONE",phone);
+        //Toast.makeText(this, accessToken, Toast.LENGTH_SHORT).show();
+
         String url = Application.domain+"api/getBooks/"+phone+"/"+accessToken;
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
@@ -240,8 +248,11 @@ public class SubscribeActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
-                }else Toast.makeText(SubscribeActivity.this, "You have not subscribed to any book", Toast.LENGTH_SHORT).show();
-                dialog.hide();
+                }else {
+                    Toast.makeText(SubscribeActivity.this, "You have not subscribed to any book", Toast.LENGTH_SHORT).show();
+                    dialog.hide();
+                }
+
             }
         }, new Response.ErrorListener() {
 

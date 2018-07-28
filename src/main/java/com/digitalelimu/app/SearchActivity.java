@@ -83,6 +83,12 @@ public class SearchActivity extends AppCompatActivity {
     private static final String TAG = "My DEBUG TAG";
 
     @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflator = getMenuInflater();
         inflator.inflate(R.menu.searchmenu,menu);
