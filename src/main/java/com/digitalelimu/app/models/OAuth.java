@@ -21,6 +21,10 @@ public class OAuth {
     @Expose
     private String email;
 
+    @SerializedName("agent")
+    @Expose
+    private String agent;
+
     @SerializedName("accesstoken")
     @Expose
     private String accesstoken;
@@ -36,11 +40,12 @@ public class OAuth {
     @Expose
     private String updatedAt;
 
-    public OAuth(String phone, String password, String email) {
+    public OAuth(String phone, String password, String email,String agent) {
         super();
         this.phone = phone;
         this.password = password;
         this.email = email;
+        this.agent = agent;
     }
 
     public Integer getId() {
@@ -73,6 +78,14 @@ public class OAuth {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getAgent() {
+        return agent;
+    }
+
+    public void setAgent(String agent) {
+        this.agent = agent;
     }
 
     public String getPassword() {

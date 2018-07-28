@@ -14,6 +14,7 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Valid Email</string>
+    <string name="prompt_agent">Agent No</string>
     <string name="prompt_phone">Username is your Phone(0712345678)</string>
     <string name="prompt_password">Input Password (+6 digits)</string>
     <string name="action_sign_in">Sign in or register</string>

@@ -225,7 +225,7 @@ public class SubscribeActivity extends AppCompatActivity {
         Log.v("PHONE",phone);
         //Toast.makeText(this, accessToken, Toast.LENGTH_SHORT).show();
 
-        String url = Application.domain+"api/getBooks/"+phone+"/"+accessToken;
+        String url = Application.domain+"api/getSubscribed/"+phone+"/"+accessToken;
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {

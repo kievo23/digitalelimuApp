@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderManager
 
     // UI references.
     private static AutoCompleteTextView mPhoneView,mEmailView2;
-    private static EditText mPasswordView,mPasswordView2,mEmail;
+    private static EditText mPasswordView,mPasswordView2,mEmail,mAgent;
     private static  View mProgressView;
     private static View mLoginFormView;
 
@@ -221,6 +221,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderManager
                 mEmailView2 = (AutoCompleteTextView) rootView.findViewById(R.id.email2);
                 mPasswordView2 = (EditText) rootView.findViewById(R.id.password2);
                 mEmail = (EditText) rootView.findViewById(R.id.email);
+                mAgent = (EditText) rootView.findViewById(R.id.agent);
                 mLoginFormView = rootView.findViewById(R.id.login_form2);
                 mProgressView = rootView.findViewById(R.id.login_progress2);
                 final View finalRootView = rootView;
@@ -320,6 +321,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderManager
             String phone = username.getText().toString();
             String password = passwordView.getText().toString();
             String email = emailView.getText().toString();
+            String agentno = mAgent.getText().toString();
 
             boolean cancel = false;
             View focusView = rootView;
