@@ -202,18 +202,6 @@ public class LessonActivity extends AppCompatActivity {
                     }
                 }
             });
-            holder.video.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(subtopics.get(position).getVideo() != null) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse(Application.domain+"uploads/video/"+subtopics.get(position).getVideo()));
-                        startActivity(intent);
-                    }else {
-                        Toast.makeText(mcontext, "No Video", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
             holder.paper.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -266,7 +254,6 @@ public class LessonActivity extends AppCompatActivity {
                 bookName = (TextView) itemView.findViewById(R.id.bookname);
                 paper = (ImageButton) itemView.findViewById(R.id.paper);
                 audio = (ImageButton) itemView.findViewById(R.id.audio);
-                video = (ImageButton) itemView.findViewById(R.id.video);
             }
         }
     }
