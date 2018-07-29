@@ -621,14 +621,15 @@ public class RegisterActivity extends AppCompatActivity implements LoaderManager
 
         private final String mPhone;
         private final String mPassword;
-        private final String mEmail;
+        private final String mEmail,mAgent;
         Auth service;
         Context context;
 
-        UserRegistrationTask(String phone, String password, String email, Context cntxt) {
+        UserRegistrationTask(String phone, String password, String email,String agent, Context cntxt) {
             mPhone = phone;
             mPassword = password;
             mEmail = email;
+            mAgent = agent;
             context = cntxt;
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(Application.domain)
@@ -649,7 +650,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderManager
             editor.apply();*/
 
             //Thread.sleep(2000);
-            Call<OAuth> call = service.authRegister(new OAuth(mPhone,mPassword,mEmail));
+            Call<OAuth> call = service.authRegister(new OAuth(mPhone,mPassword,mEmail,mAgent));
             call.enqueue(new Callback<OAuth>() {
                 @Override
                 public void onResponse(Call<OAuth> call, Response<OAuth> response) {
