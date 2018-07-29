@@ -229,6 +229,7 @@ public class SubscribeActivity extends AppCompatActivity {
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
+                dialog.hide();
                 if (response.length() != 0){
                     for (int i = 0; i < response.length(); i++) {
                         try {
