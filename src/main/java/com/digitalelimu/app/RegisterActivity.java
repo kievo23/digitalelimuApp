@@ -366,7 +366,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderManager
                 // Show a progress spinner, and kick off a background task to
                 // perform the user login attempt.
                 new RegisterActivity().showProgress(true);
-                mAuthTaskRst = new UserRegistrationTask(phone, password, email,getContext());
+                mAuthTaskRst = new UserRegistrationTask(phone, password, email, agentno,getContext());
                 mAuthTaskRst.execute((Void) null);
             }
         }
